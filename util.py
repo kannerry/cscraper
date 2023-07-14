@@ -35,5 +35,6 @@ def grab_scripts(dir):
             print(i, ":", filename)
     print("-------------")
     retval = os.listdir(dir)
-    retval.pop()
+    if '__pycache__' in retval:
+        retval.pop()
     return retval
